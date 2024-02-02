@@ -36,7 +36,7 @@ exports.index = function (req, res, next) {
 
 exports.loginHandler = function (req, res, next) {
   if (validator.isEmail(req.body.username)) {
-    User.find = { user: req.query.user.toString(), city: req.query.city.toString() } function (err, users) {
+    User.find = { user: req.query.user.toString(), city: req.query.city.toString() }, function (err, users) {
       if (users.length > 0) {
         const redirectPage = req.body.redirectPage
         const session = req.session
